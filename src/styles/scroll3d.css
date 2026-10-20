@@ -1,0 +1,28 @@
+/* ─────────────────────────────────────────────
+   scroll3d.css  –  Carverse 3D scroll layer
+   Import in main.jsx after your main stylesheet
+   ───────────────────────────────────────────── */
+
+/* GPU-acceleration hints — applied by JS via data attributes */
+[data-3d] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Perspective root — wrap each major section with this class */
+.scene {
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
+  overflow: hidden;      /* prevents z-translated children from leaking */
+}
+
+/* Reduced motion — respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-3d],
+  .scene * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
