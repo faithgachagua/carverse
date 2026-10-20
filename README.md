@@ -22,7 +22,7 @@ This prototype uses `localStorage` as a stand-in database (see
 
 ## The flow
 
-- Visitors can browse cars, view details, and buy — no login required.
+- Visitors can browse cars, view details, and buy - there is no login required.
 - Click the shield logo **5 times** (top-left) to reach the hidden member
   login at `/login`.
 - From there, new visitors can submit a **Request Membership** form.
